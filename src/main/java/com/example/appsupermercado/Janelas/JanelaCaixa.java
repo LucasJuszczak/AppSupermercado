@@ -1,5 +1,6 @@
-package com.example.appsupermercado;
+package com.example.appsupermercado.Janelas;
 
+import com.example.appsupermercado.HelloApplication;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

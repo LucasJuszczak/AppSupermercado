@@ -1,19 +1,20 @@
 package com.example.appsupermercado;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Menu;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
-
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloController {
     @FXML
     protected void onCaixaButtonClick() throws IOException {
-        new JanelaCaixa();
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("caixa-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 340);
+        Stage stage = new Stage();
+        stage.setTitle("Caixa");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
