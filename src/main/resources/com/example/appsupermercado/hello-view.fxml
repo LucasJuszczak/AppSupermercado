@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appsupermercado.HelloController">
     <MenuBar>
         <Menu text="Funcionalidades">
-            <MenuItem fx:id="menuItemCaixa" text="Caixa" onAction="#onCaixaButtonClick"/>
-            <MenuItem fx:id="menuItemVerificadorPreco" text="Verificador de Preços" onAction="#onVerificadorPrecoButtonClick"/>
+            <MenuItem text="Caixa" onAction="#onCaixaMenuClick"/>
+            <MenuItem text="Verificador de Preços" onAction="#onVerificadorPrecoMenuClick"/>
         </Menu>
-        <Menu fx:id="menuItemSobre" text="Sobre" onAction="#onSobreButtonClick">
+        <Menu text="Sobre" onAction="#onSobreMenuClick">
         </Menu>
-        <Menu text="Sair" mnemonicParsing="true" onAction="#onSairButtonClick"/>
+        <Menu text="Sair" mnemonicParsing="true" onAction="#onSairMenuClick"/>
     </MenuBar>
 </AnchorPane>

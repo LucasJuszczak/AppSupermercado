@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class HelloController {
     @FXML
-    protected void onCaixaButtonClick() throws IOException {
+    protected void onCaixaMenuClick() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("caixa-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 340);
         Stage stage = new Stage();
@@ -18,15 +18,27 @@ public class HelloController {
     }
 
     @FXML
-    protected void onVerificadorPrecoButtonClick() {
+    protected void onVerificadorPrecoMenuClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("verificadorpreco-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 340);
+        Stage stage = new Stage();
+        stage.setTitle("Verificador de Preço");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    protected void onSobreButtonClick(){
+    protected void onSobreMenuClick() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sobre-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 340);
+        Stage stage = new Stage();
+        stage.setTitle("Verificador de Preço");
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML
-    protected void onSairButtonClick(){
+    protected void onSairMenuClick(){
         System.exit(0);
     }
 
