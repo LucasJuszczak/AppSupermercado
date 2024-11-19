@@ -1,14 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.appsupermercado.Controllers.CaixaController"
-            prefHeight="400.0" prefWidth="600.0">
+<VBox spacing="10" alignment="CENTER_LEFT" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.appsupermercado.Controllers.CaixaController">
+    <padding>
+        <Insets top="18" right="18" bottom="18" left="18" />
+    </padding>
 
-</AnchorPane>
+    <Label text="Caixa de Supermercado" style="-fx-font-weight: bold;" />
+
+    <Label text="Código:" />
+    <TextField fx:id="txtCodigo" prefWidth="60" />
+
+    <Label text="Quantidade:" />
+    <TextField fx:id="txtQuantidade" prefWidth="60" />
+
+    <Label fx:id="lblProdutoInformacao" text="Informações do produto" />
+
+    <Button fx:id="btnAdicionarLista" text="Adicionar à lista" onMouseClicked="#adicionarLista" />
+
+    <Label text="Lista de Produtos:" />
+    <ListView fx:id="listProdutos" prefHeight="120" />
+
+    <Button fx:id="btnRemoverProduto" text="Excluir item selecionado" onMouseClicked="#removerProduto" />
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Total: R$" />
+        <Label fx:id="lblValorTotal" text="0.00" />
+        <Label text="Valor pago:" />
+        <TextField fx:id="txtPagamento" prefWidth="60" onAction="#calcularTroco" />
+        <Label text="Troco: R$" />
+        <Label fx:id="lblValorTroco" text="0.00" />
+    </HBox>
+</VBox>

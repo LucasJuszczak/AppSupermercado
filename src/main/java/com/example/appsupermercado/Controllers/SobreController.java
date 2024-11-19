@@ -1,4 +1,3 @@
 package com.example.appsupermercado.Controllers;
 
-public class SobreController {
-}
+public class SobreController { }

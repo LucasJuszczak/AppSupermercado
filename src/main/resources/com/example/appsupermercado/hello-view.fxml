@@ -1,16 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appsupermercado.HelloController">
-    <MenuBar>
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.appsupermercado.HelloController">
+    <MenuBar prefHeight="25.0" prefWidth="300.0">
         <Menu text="Funcionalidades">
-            <MenuItem text="Caixa" onAction="#onCaixaMenuClick"/>
-            <MenuItem text="Verificador de Preços" onAction="#onVerificadorPrecoMenuClick"/>
+            <MenuItem accelerator="F2" onAction="#onCaixaMenuClick" text="Caixa" />
+            <MenuItem accelerator="F3" onAction="#onVerificadorPrecoMenuClick" text="Verificador de Preços" />
         </Menu>
-        <Menu text="Sobre" onAction="#onSobreMenuClick">
+        <Menu text="Sobre">
+            <MenuItem onAction="#onSobreMenuClick" text="Sobre o Sistema" />
         </Menu>
-        <Menu text="Sair" mnemonicParsing="true" onAction="#onSairMenuClick"/>
+        <Menu text="Sair">
+            <MenuItem onAction="#onSairMenuClick" text="Sair do Sistema" />
+        </Menu>
     </MenuBar>
+
+    <VBox alignment="CENTER" layoutY="30.0" prefWidth="300.0" spacing="15">
+        <VBox alignment="CENTER" spacing="10" />
+        <ImageView fitHeight="150.0" fitWidth="175.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@images/LogoSuperPrime.png"/>
+        </ImageView>
+        <Label  text="Versão 1.0.0" />
+        <Button  onMouseClicked="#onCaixaMenuClick" prefWidth="150" text="Caixa" />
+        <Button  onMouseClicked="#onVerificadorPrecoMenuClick" prefWidth="150" text="Verificador de Preço" />
+        <Button  onMouseClicked="#onSobreMenuClick" prefWidth="150" text="Sobre o Sistema" />
+        <Button  onMouseClicked="#onSairMenuClick" prefWidth="150" text="Sair" />
+    </VBox>
 </AnchorPane>

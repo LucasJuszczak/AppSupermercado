@@ -9,7 +9,7 @@ public class JanelaSobre extends Stage {
     public JanelaSobre() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(com.example.appsupermercado.HelloApplication.class.getResource("sobre-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 340);
-        this.setTitle("Sobre");
+        this.setTitle("Hello World!");
         this.setScene(scene);
         this.show();
     }
