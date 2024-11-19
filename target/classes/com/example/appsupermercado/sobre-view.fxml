@@ -7,7 +7,7 @@
 
 <VBox alignment="CENTER" prefHeight="500.0" prefWidth="300.0" spacing="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.appsupermercado.Controllers.SobreController">
     <padding>
-        <Insets bottom="15" left="15" right="15" top="15" />
+        <Insets top="18" right="18" bottom="18" left="18" />
     </padding>
 
     <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
